@@ -21,7 +21,7 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('newsgame.urls')),
-    path('api-auth/', include('rest_framework.urls')), # add login button on DRF
+    # path('api-auth/', include('rest_framework.urls')), # add login button on DRF
     path('api-token-auth/', views.obtain_auth_token), # built in view to generate/get user token via api
     path('api/docs/', include_docs_urls(title='Newsgame API'))
 ]
